@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "openweather-cli"
+version = "1.0.0"
+description = "Python CLI client for fetching current weather and forecasts using the OpenWeather API."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "click>=8.1.0",
+    "requests>=2.31.0",
+    "PyYAML>=6.0.1",
+]
+
+[project.scripts]
+weather = "weather_cli.main:cli"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
